@@ -14,7 +14,7 @@ into
 
 ```python
 y = (Maybe(just=x) if x > 0 else Maybe()).bind(lambda a:
-     Maybe(just=x*a)                    .bind(lambda b:
+     Maybe(just=x*a)                     .bind(lambda b:
      Maybe.mreturn(a+b)))
 ```
 
