@@ -19,21 +19,15 @@ class Maybe(object):
             return 'Nothing'
         return 'Just {}'.format(self.just)
 
+just = lambda x: Maybe(just=x)
+nothing = Maybe()
 
 @with_do_notation
 def decrement_positives(x):
     with do(Maybe) as y:
-        a = Maybe(just=x) if x > 0 else Maybe()
+        a = just(x) if x > 0 else nothing
         mreturn(a-1)
     return y
-
-
-def plain_decrement_positives(x):
-    with do(Maybe) as y:
-        a = Maybe(just=x) if x > 0 else Maybe()
-        mreturn(a-1)
-    return y
-
 
 print decrement_positives(0)  # Nothing
 print decrement_positives(1)  # Just 0
