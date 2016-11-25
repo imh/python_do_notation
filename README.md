@@ -18,7 +18,7 @@ y = (Maybe(just=x) if x > 0 else Maybe()).bind(lambda a:
      Maybe.mreturn(a+b)))
 ```
 
-In a `maybe_examply.py`, `list_example.py`, and `parser_example.py` defines the Maybe monad, a List monad, and a monadic parser.
+**Usage examples:** In a `maybe_examply.py`, `list_example.py`, and `parser_example.py` defines the Maybe monad, a List monad, and a monadic parser, showing usage in each.
 
 Just use it like any other decorator, and you can use this magical new syntax.
 All it does is rewrite newlines and assignments into a chain of binds, and changes `mreturn` into the specific mreturn needed for the monad in use within that do block.
