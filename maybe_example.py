@@ -1,6 +1,6 @@
 from do_notation import with_do_notation
 
-# instance Monad [] where
+# instance Monad Maybe where
 #   return x       = Just x
 #   (Just x) >>= f = f x
 #   Nothing  >>= _ = Nothing
