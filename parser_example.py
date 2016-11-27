@@ -62,7 +62,6 @@ def parse_string(string):
             parse_string(string[1:])
             mreturn(string)
         return x
-
     return parser_zero
 
 
